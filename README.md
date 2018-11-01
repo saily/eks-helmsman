@@ -10,6 +10,10 @@ This repository contains all tools to access your [EKS](https://aws.amazon.com/e
                -e AWS_SECRET_ACCESS_KEY=<secret> \
                widerin/eks-helmsman
 
+Set your cluster by running following command in the container:
+
+    aws eks update-kubeconfig --name=$AWS_EKS_CLUSTER_NAME
+
 ## Environment variables
 
 - `AWS_EKS_CLUSTER_NAME`: Your [EKS](https://aws.amazon.com/eks) cluster name in AWS console
