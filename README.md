@@ -18,3 +18,12 @@ Set your cluster by running following command in the container:
 
 - `AWS_EKS_CLUSTER_NAME`: Your [EKS](https://aws.amazon.com/eks) cluster name in AWS console
 - `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY`: AWS credentials to access the cluster
+
+## Helpers available in the image
+
+- `helmsman`
+- `helm`: You might want to use this image to just use it with `helm` and ignore the `helmsman` binary.
+- `kubectl`
+- `awscli`
+- `aws-iam-authenticator`
+- `envsubst`: substitute environment variables with `envsubst '$VAR1 $VAR2' < file1.yaml > file2.yaml`.

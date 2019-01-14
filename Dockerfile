@@ -11,7 +11,7 @@ ENV HELM_HOME=/helm/.helm
 ENV HELM_DIFF_VERSION=v2.11.0+3
 
 RUN pip install --no-cache awscli && \
-    apk --update --no-cache add bash && \
+    apk --update --no-cache add bash gettext && \
     adduser -h /helm -D helm
 
 USER helm
