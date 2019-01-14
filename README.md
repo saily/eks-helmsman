@@ -1,4 +1,4 @@
-# Helmsman for EKS
+# Helm, Kubectl and helmsman for EKS
 
 This repository contains all tools to access your [EKS](https://aws.amazon.com/eks) cluster in AWS and ships [Helmsman](https://github.com/Praqma/Helmsman/releases), [Helm](https://helm.sh), [kubectl](https://github.com/kubernetes/kubectl) and [aws-iam-authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator) in one small docker image.
 

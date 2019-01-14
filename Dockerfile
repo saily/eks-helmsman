@@ -8,6 +8,7 @@ COPY --from=helm /bin/helmsman /usr/local/bin/helmsman
 COPY --from=authenticator /heptio-authenticator-aws /usr/local/bin/aws-iam-authenticator
 
 ENV HELM_HOME=/helm/.helm
+ENV HELM_DIFF_VERSION=v2.11.0+3
 
 RUN pip install --no-cache awscli && \
     apk --update --no-cache add bash && \
@@ -16,6 +17,6 @@ RUN pip install --no-cache awscli && \
 USER helm
 
 RUN helm init --client-only && \
-    wget -O- https://github.com/databus23/helm-diff/releases/download/v2.11.0%2B2/helm-diff-linux.tgz | tar -xvzC ${HELM_HOME}/plugins
+    wget -O- https://github.com/databus23/helm-diff/releases/download/${HELM_DIFF_VERSION}/helm-diff-linux.tgz | tar -xvzC ${HELM_HOME}/plugins
 
 ENTRYPOINT /bin/bash
